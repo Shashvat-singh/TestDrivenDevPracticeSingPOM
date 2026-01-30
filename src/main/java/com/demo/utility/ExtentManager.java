@@ -27,7 +27,7 @@ public class ExtentManager {
 	// Initialize the Extent Report
 	public synchronized static ExtentReports getReporter() {
 		if (extent == null) {
-			String reportPath = System.getProperty("user.dir") + "/src/test/resources/ExtentReports/ExtentReport.html";
+			String reportPath = System.getProperty("user.dir") + "src/test/resources/ExtentReports/ExtentReport.html";
 			ExtentSparkReporter spark = new ExtentSparkReporter(reportPath);
 			spark.config().setReportName("Automation_Shashvat_Test Report");
 			spark.config().setDocumentTitle("Demo.Shop_Report");
@@ -108,7 +108,7 @@ public class ExtentManager {
         String timeStamp = new SimpleDateFormat("yyyy-MM-dd_HH-mm-ss").format(new java.util.Date());
         
         //Saving the screenshot to a file
-        String destPath = System.getProperty("user.dir") + "/src/test/resources/screenshots/"+screenshotName+"_"+timeStamp+".png";
+        String destPath = System.getProperty("user.dir") + "src/test/resources/Screenshots/"+screenshotName+"_"+timeStamp+".png";
         
         File finalPath = new File(destPath);
         try {
